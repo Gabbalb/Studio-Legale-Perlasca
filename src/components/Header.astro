@@ -1,142 +1,29 @@
 ---
-interface Props {
-  currentPage?: string;
-}
-
-const { currentPage = '/' } = Astro.props;
-
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/su-di-noi', label: 'Su di noi' },
-  { href: '/la-nostra-politica', label: 'La nostra politica' },
-  { href: '/dove-trovarci', label: 'Dove trovarci' },
-];
+// Original Nicepage Header
 ---
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
-      
-      <!-- Logo & Studio Name -->
-      <a href="/" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-lg overflow-hidden border border-slate-200 shadow-xs bg-navy-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-          <img 
-            src="/images/logo.jpg" 
-            alt="Logo Studio Legale Perlasca" 
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif font-bold text-navy-950 text-lg sm:text-xl tracking-tight leading-tight group-hover:text-navy-700 transition-colors">
-            STUDIO LEGALE PERLASCA
-          </span>
-          <span class="text-xs font-sans text-slate-500 uppercase tracking-widest font-semibold">
-            Avvocati Civilisti • Brescia
-          </span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-        {navItems.map((item) => {
-          const isActive = currentPage === item.href || (item.href !== '/' && currentPage.startsWith(item.href));
-          return (
-            <a
-              href={item.href}
-              class={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                isActive
-                  ? 'text-navy-950 font-semibold bg-navy-50/80 text-navy-900 border-b-2 border-navy-800'
-                  : 'text-slate-600 hover:text-navy-900 hover:bg-slate-100/60'
-              }`}
-            >
-              {item.label}
-            </a>
-          );
-        })}
-      </nav>
-
-      <!-- Desktop CTA Button -->
-      <div class="hidden lg:flex items-center gap-3">
-        <a 
-          href="tel:+3903046785" 
-          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-navy-900 hover:bg-navy-800 shadow-xs hover:shadow-md transition-all duration-200"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
-          <span>030 46785</span>
-        </a>
-      </div>
-
-      <!-- Mobile Menu Toggle Button -->
-      <button 
-        id="mobile-menu-btn" 
-        type="button" 
-        class="md:hidden p-2 rounded-lg text-slate-700 hover:text-navy-950 hover:bg-slate-100 focus:outline-hidden"
-        aria-label="Apri menu"
-        aria-expanded="false"
-      >
-        <svg id="hamburger-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
+<section class="u-clearfix u-header u-block-a244-1" custom-posts-hash="[]" data-style="header-imglogo-menu" data-post-id="post7" data-section-properties="{&quot;grid-spacing&quot;:&quot;0&quot;,&quot;align&quot;:&quot;left&quot;,&quot;stretch&quot;:true}" id="sec-65d9" data-source="" data-id="a244">
+  <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-xs u-valign-top-lg u-block-a244-2"><a href="/" class="u-image u-logo u-block-a244-8" data-brightness="" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" title="Home">
+      <img src="/images/logoimage_page-0001-1.jpg" class="u-logo-image u-block-a244-10" data-image-width="54">
+    </a>
+    
+    
+  <nav class="u-menu u-menu-dropdown u-offcanvas u-block-a244-11"><div class="menu-collapse" style="font-size: 1rem; font-weight: 700; letter-spacing: 0px; text-transform: uppercase;">
+        <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#" style="padding: 2px 0px; font-size: calc(1em + 4px);"><svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg><svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">    <g>        <rect y="1" width="16" height="2"></rect>        <rect y="7" width="16" height="2"></rect>        <rect y="13" width="16" height="2"></rect>    </g></svg></a>
     </div>
-  </div>
-
-  <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/98 px-4 pt-3 pb-6 space-y-2 shadow-lg animate-in slide-in-from-top-2 duration-200">
-    {navItems.map((item) => {
-      const isActive = currentPage === item.href || (item.href !== '/' && currentPage.startsWith(item.href));
-      return (
-        <a
-          href={item.href}
-          class={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
-            isActive
-              ? 'bg-navy-50 text-navy-950 font-bold border-l-4 border-navy-900 pl-4'
-              : 'text-slate-700 hover:bg-slate-50 hover:text-navy-950'
-          }`}
-        >
-          {item.label}
-        </a>
-      );
-    })}
-    <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
-      <a 
-        href="tel:+3903046785" 
-        class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg text-sm font-semibold text-white bg-navy-900 hover:bg-navy-800 transition-colors shadow-xs"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
-        <span>Chiama Studio: 030 46785</span>
-      </a>
-      <a 
-        href="tel:+39335235766" 
-        class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-medium text-navy-900 bg-slate-100 hover:bg-slate-200 transition-colors"
-      >
-        <span>Cell. Avv. Perlasca: +39 335 23 5766</span>
-      </a>
+    <div class="u-custom-menu u-nav-container">
+        <ul class="u-nav u-spacing-30 u-unstyled u-block-a244-12"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/" data-page-id="29" style="padding: 10px 0px;">Home</a><div class="fake u-nav-popup u-block-a244-19"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-17"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="" data-page-id="">Menu Item 1</a><div class="u-nav-popup u-block-a244-19"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-17"></ul></div></li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="" data-page-id="">Menu Item 2</a><div class="u-nav-popup u-block-a244-19"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-17"></ul></div></li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="" data-page-id="">Menu Item 3</a><div class="u-nav-popup u-block-a244-19"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-17"></ul></div></li></ul></div></li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/su-di-noi" data-page-id="false" style="padding: 10px 0px;">Su di noi</a></li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/la-nostra-politica" data-page-id="false" style="padding: 10px 0px;">La nostra politica</a></li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/dove-trovarci" data-page-id="false" style="padding: 10px 0px;">Dove trovarci</a></li></ul>
     </div>
-  </div>
-</header>
-
-<script>
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
-
-  if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
-    menuBtn.addEventListener('click', () => {
-      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!isExpanded));
-      mobileMenu.classList.toggle('hidden');
-      hamburgerIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  }
-</script>
+    <div class="u-custom-menu u-nav-container-collapse">
+        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav u-block-a244-14"><div class="u-inner-container-layout u-sidenav-overflow">
+            <div class="u-menu-close u-block-a244-15"></div>
+            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-block-a244-16"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/" data-page-id="29">Home</a><div class="fake u-nav-popup u-block-a244-23"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-18"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="" data-page-id="">Menu Item 1</a><div class="u-nav-popup u-block-a244-23"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-18"></ul></div></li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="" data-page-id="">Menu Item 2</a><div class="u-nav-popup u-block-a244-23"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-18"></ul></div></li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="" data-page-id="">Menu Item 3</a><div class="u-nav-popup u-block-a244-23"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-block-a244-18"></ul></div></li></ul></div></li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/su-di-noi" data-page-id="false">Su di noi</a></li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/la-nostra-politica" data-page-id="false">La nostra politica</a></li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dove-trovarci" data-page-id="false">Dove trovarci</a></li></ul>
+        </div></div>
+        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+    </div></nav></div>
+  
+  
+  
+  
+  
+</section>
