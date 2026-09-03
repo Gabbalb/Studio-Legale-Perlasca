@@ -1,0 +1,32 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment and editor
+.env
+.env.*
+.DS_Store
+.vscode/
+.idea/
+
+# WordPress archive and temporary extraction data
+*.wpress
+extracted/
+dumped_pages/
+*.py
+wp_posts.json
+wp_postmeta.json
+inspect_*.py
+dump_*.py
+find_*.py
+parse_*.py
+setup_assets.py
+list_all_uploads.py
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

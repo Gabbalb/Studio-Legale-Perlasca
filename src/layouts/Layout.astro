@@ -1,0 +1,117 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = "Studio Legale Avv. Cristiano Perlasca a Brescia. Dal 1994 al fianco dei propri clienti con assistenza legale qualificata in diritto civile, commerciale, internazionale, famiglia e assicurativo.",
+  keywords = "Studio Legale Brescia, Avvocato Brescia, Avvocato Cristiano Perlasca, Avvocato Paola Scolari, Diritto Civile Brescia, Diritto Assicurativo, Diritto di Famiglia, Diritto Internazionale",
+  image = "/images/logo.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://studiolegaleavvocatoperlasca.com');
+const currentPath = Astro.url.pathname;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Studio Legale Avv. Cristiano Perlasca",
+  "image": "https://studiolegaleavvocatoperlasca.com/images/logo.jpg",
+  "@id": "https://studiolegaleavvocatoperlasca.com",
+  "url": "https://studiolegaleavvocatoperlasca.com",
+  "telephone": "+3903046785",
+  "faxNumber": "+3903046785",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Armando Diaz 7",
+    "addressLocality": "Brescia",
+    "postalCode": "25121",
+    "addressRegion": "BS",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.5345,
+    "longitude": 10.2225
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Cristiano Perlasca",
+      "jobTitle": "Avvocato",
+      "telephone": "+39335235766"
+    },
+    {
+      "@type": "Person",
+      "name": "Paola Scolari",
+      "jobTitle": "Avvocato",
+      "telephone": "+393331205093"
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-gold-200 selection:text-navy-950">
+    <Header currentPage={currentPath} />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>
