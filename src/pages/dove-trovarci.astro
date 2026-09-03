@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 
 const officePhotos = [
-  { src: "/images/img_4531.jpg", title: "Sala Riunioni e Consulenze" },
-  { src: "/images/img_4532.jpg", title: "Biblioteca Giuridica" },
-  { src: "/images/img_4544.jpg", title: "Ufficio Avv. Perlasca" },
-  { src: "/images/img_4553.jpg", title: "Dettaglio Studio" },
-  { src: "/images/img_4557.jpg", title: "Postazione Lavoro" },
-  { src: "/images/img_4563.jpg", title: "Archivio Pratiche" },
+  { src: "/images/img_4531.jpg" },
+  { src: "/images/img_4532.jpg" },
+  { src: "/images/img_4544.jpg" },
+  { src: "/images/img_4553.jpg" },
+  { src: "/images/img_4557.jpg" },
+  { src: "/images/img_4563.jpg" },
 ];
 ---
 
@@ -52,18 +52,13 @@ const officePhotos = [
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {officePhotos.map((photo) => (
-          <div class="bg-slate-50 rounded-sm overflow-hidden border border-slate-200 shadow-xs">
-            <div class="h-60 overflow-hidden">
-              <img 
-                src={photo.src} 
-                alt={photo.title} 
-                class="w-full h-full object-cover hover:scale-103 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-3.5 text-center bg-white border-t border-slate-100">
-              <span class="font-serif font-bold text-sm text-navy-950">{photo.title}</span>
-            </div>
+          <div class="bg-slate-50 rounded-sm overflow-hidden border border-slate-200 shadow-xs h-64 sm:h-72">
+            <img 
+              src={photo.src} 
+              alt="Studio Legale Perlasca Brescia" 
+              class="w-full h-full object-cover hover:scale-103 transition-transform duration-300"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
