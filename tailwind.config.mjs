@@ -4,39 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f4f7fb',
-          100: '#e5edf6',
-          200: '#cfdded',
-          300: '#acc6e0',
-          400: '#82a9cf',
-          500: '#638ebf',
-          600: '#4c74a8',
-          700: '#3d5c87',
-          800: '#2b3f5d',
-          900: '#1e2d42',
-          950: '#111927',
+        navy: {
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#829ab1',
+          500: '#627d98',
+          600: '#486581',
+          700: '#334e68',
+          800: '#243b53',
+          900: '#102a43',
+          950: '#0b1b2b',
         },
-        gold: {
-          50: '#fbf9f2',
-          100: '#f5f0df',
-          200: '#ebdcb9',
-          300: '#dec28d',
-          400: '#cfa661',
-          500: '#b88b3e',
-          600: '#9e7131',
-          700: '#7e5628',
-          800: '#674625',
-          900: '#553a22',
-        },
-        slate: {
-          850: '#172033',
-        }
       },
       fontFamily: {
         serif: ['"Playfair Display"', '"Merriweather"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', '"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
       },
+      borderRadius: {
+        'xs': '2px',
+        'sm': '4px',
+        'DEFAULT': '6px',
+        'md': '8px',
+        'lg': '10px',
+      }
     },
   },
   plugins: [],

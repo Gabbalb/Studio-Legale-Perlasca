@@ -8,8 +8,8 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- PAGE HEADER -->
-  <section class="bg-primary-950 text-white py-16 sm:py-20 relative overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-20">
+  <section class="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden border-b border-navy-900">
+    <div class="absolute inset-0 z-0 opacity-15">
       <img 
         src="/images/287ced42e76bf0d6dd3ec2a67bb3b0a1b2c496a998c560ba9ea1da5e5a6e2a4f1771b9cc8528329c6e94beda08259f56bebb75095469f6b5a51c47_1280.jpg" 
         alt="Studio Legale Perlasca" 
@@ -17,7 +17,7 @@ import Layout from '../layouts/Layout.astro';
       />
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Studio Legale Perlasca</span>
+      <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Studio Legale Perlasca</span>
       <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
         Ecco qualcosa su di noi
       </h1>
@@ -31,8 +31,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-16 sm:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-slate-700 leading-relaxed text-base sm:text-lg">
       
-      <div class="p-6 bg-slate-50 border-l-4 border-primary-900 rounded-r-xl">
-        <p class="font-serif text-lg sm:text-xl font-medium text-primary-950 leading-snug">
+      <div class="p-6 bg-slate-50 border-l-3 border-navy-950 rounded-xs">
+        <p class="font-serif text-lg sm:text-xl font-medium text-navy-950 leading-snug">
           Lo Studio legale offre consulenza ed assistenza di tipo giudiziale e stragiudiziale (contrattualistica, pareri ed arbitrati) nei principali settori del diritto civile.
         </p>
       </div>
@@ -45,8 +45,8 @@ import Layout from '../layouts/Layout.astro';
         Il cliente, inoltre, potrà rivolgersi alla segreteria dello studio per concordare colloqui con il legale, per aggiornamenti sullo stato della pratica affidata e per la soluzione di ogni questione amministrativa e contabile.
       </p>
 
-      <div class="pt-4 border-t border-slate-100">
-        <h3 class="font-serif text-xl font-bold text-primary-950 mb-3">
+      <div class="pt-6 border-t border-slate-200">
+        <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">
           Ricerca Giuridica e Dottrina
         </h3>
         <p>
@@ -54,8 +54,8 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <div class="pt-4 border-t border-slate-100">
-        <h3 class="font-serif text-xl font-bold text-primary-950 mb-3">
+      <div class="pt-6 border-t border-slate-200">
+        <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">
           Processo Civile Telematico e Polis Web
         </h3>
         <p>
@@ -69,52 +69,67 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- PROFESSIONISTI -->
+  <!-- PROFESSIONISTI WITH REAL PHOTOS -->
   <section class="py-16 bg-slate-50 border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center mb-10">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-primary-950">
+      <div class="text-center mb-10 space-y-1">
+        <span class="text-xs uppercase tracking-widest text-slate-500 font-bold">I Legali</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-950">
           I Professionisti
         </h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
         
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 text-center shadow-xs card-hover space-y-3">
-          <div class="w-14 h-14 rounded-full bg-primary-100 text-primary-900 mx-auto flex items-center justify-center">
-            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
+        <div class="bg-white rounded-sm border border-slate-200 text-center shadow-xs overflow-hidden flex flex-col">
+          <div class="h-64 sm:h-72 overflow-hidden bg-slate-100">
+            <img 
+              src="/images/cristiano.jpg" 
+              alt="Avv. Cristiano Perlasca" 
+              class="w-full h-full object-cover object-top"
+            />
           </div>
-          <h4 class="font-serif font-bold text-xl text-primary-950">Cristiano Perlasca</h4>
-          <p class="text-xs text-gold-700 font-bold uppercase tracking-wider">Avvocato</p>
-          <a href="tel:+39335235766" class="block text-sm font-bold text-primary-900 hover:text-primary-700 pt-1">
-            +39 335 23 5766
-          </a>
-          <div class="pt-2">
-            <a 
-              href="/documents/CVCristianoperlasca.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-block text-xs font-bold text-gold-700 hover:underline"
-            >
-              Scarica CV (PDF) →
-            </a>
+          <div class="p-6 space-y-2 flex-grow flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif font-bold text-xl text-navy-950">Cristiano Perlasca</h4>
+              <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Avvocato</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 space-y-2">
+              <a href="tel:+39335235766" class="block text-sm font-semibold text-navy-950 hover:text-navy-700">
+                +39 335 23 5766
+              </a>
+              <a 
+                href="/documents/CVCristianoperlasca.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-block text-xs font-semibold text-slate-600 hover:text-navy-950 underline"
+              >
+                Scarica Curriculum (PDF)
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 text-center shadow-xs card-hover space-y-3">
-          <div class="w-14 h-14 rounded-full bg-primary-100 text-primary-900 mx-auto flex items-center justify-center">
-            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
+        <div class="bg-white rounded-sm border border-slate-200 text-center shadow-xs overflow-hidden flex flex-col">
+          <div class="h-64 sm:h-72 overflow-hidden bg-slate-100">
+            <img 
+              src="/images/paola.jpg" 
+              alt="Avv. Paola Scolari" 
+              class="w-full h-full object-cover object-top"
+            />
           </div>
-          <h4 class="font-serif font-bold text-xl text-primary-950">Paola Scolari</h4>
-          <p class="text-xs text-gold-700 font-bold uppercase tracking-wider">Avvocato</p>
-          <a href="tel:+393331205093" class="block text-sm font-bold text-primary-900 hover:text-primary-700 pt-1">
-            +39 333 120 5093
-          </a>
+          <div class="p-6 space-y-2 flex-grow flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif font-bold text-xl text-navy-950">Paola Scolari</h4>
+              <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Avvocato</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100">
+              <a href="tel:+393331205093" class="block text-sm font-semibold text-navy-950 hover:text-navy-700">
+                +39 333 120 5093
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
