@@ -19,7 +19,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', '"Merriweather"', 'Georgia', 'serif'],
+        serif: ['"Lora"', '"Merriweather"', 'Georgia', 'serif'],
+        brand: ['"Cinzel"', '"Lora"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', '"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
@@ -27,7 +28,6 @@ export default {
         'sm': '4px',
         'DEFAULT': '6px',
         'md': '8px',
-        'lg': '10px',
       }
     },
   },
